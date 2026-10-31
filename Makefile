@@ -17,6 +17,8 @@ build/test_tetris: tests/test_tetris.c src/tetris.c include/tetris.h | build
 
 test: all build/test_tetris
 	./build/test_tetris
+	python3 tests/test_cli.py
+	python3 tests/test_terminal.py
 
 sanitize:
 	$(MAKE) clean
