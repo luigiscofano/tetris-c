@@ -1,0 +1,28 @@
+TETRIS EM C | laboratorio de programacao
+Pontos: 153      Linhas: 0    Nivel: 1  
+Proxima: Z | JOGANDO     
++--------------------+
+|          LL        |
+|      LLLLLL        |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|      JJ            |
+|      JJJJJJ        |
+|          II        |
+|          II        |
+|          II        |
+|        SSII        |
+|  OOOO  SSSS  TT    |
+|  OOOO    SSTTTTTT  |
++--------------------+
+A/D ou setas: mover | W/Z: girar | S: descer
+Espaco: queda | P: pausa | R: reiniciar | Q: sair
+seed=42 score=153 lines=0 level=1 game_over=0
