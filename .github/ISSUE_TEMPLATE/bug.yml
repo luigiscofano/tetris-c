@@ -1,0 +1,17 @@
+name: Falha reproduzivel
+description: Informe seed, comandos e comportamento observado.
+title: "[bug] "
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Como reproduzir
+      description: Inclua sistema, compilador, commit, seed e sequencia de comandos.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado e observado
+    validations:
+      required: true
