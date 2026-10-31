@@ -38,6 +38,10 @@ O workflow [Verificacao C](https://github.com/luigiscofano/tetris-c/actions/work
 
 O status de cada execução é a evidência atual; uma lista de plataformas no workflow não significa aprovação antes de executar.
 
+## Particularidades do teste POSIX
+
+O teste compara as configurações restauradas, desconsiderando apenas a flag transitória `PENDIN`, que o driver BSD/macOS pode marcar ao retomar modo canônico. Ele continua verificando os modos e demais parâmetros. A saída é drenada enquanto se espera o encerramento para não bloquear o programa no buffer limitado do pseudoterminal.
+
 ## Limites
 
 - Não há teste humano de conforto, legibilidade ou jogabilidade em todas as plataformas.

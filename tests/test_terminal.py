@@ -41,7 +41,15 @@ class TerminalTests(unittest.TestCase):
                 process.send_signal(signal.SIGTERM)
             else:
                 os.write(master, b'q')
-            self.assertEqual(process.wait(timeout=5), 0)
+            # Continue drenando a saida enquanto aguarda o encerramento.
+            # O buffer PTY menor no macOS pode bloquear o desenho/limpeza.
+            deadline = time.monotonic() + 5
+            while process.poll() is None:
+                if time.monotonic() >= deadline:
+                    self.fail('Aplicacao nao encerrou no prazo')
+                if select.select([master], [], [], 0.05)[0]:
+                    output += os.read(master, 65536)
+            self.assertEqual(process.returncode, 0)
             restored = termios.tcgetattr(slave)
             # BSD/macOS pode marcar PENDIN ao voltar ao modo canonico.
             # E estado transitorio do driver, nao configuracao alterada pelo jogo.
