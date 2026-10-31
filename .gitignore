@@ -1,0 +1,11 @@
+/build/
+__pycache__/
+*.pyc
+*.o
+*.exe
+*.gcda
+*.gcno
+*.gcov
+/core
+/core.*
+.DS_Store
