@@ -1,0 +1,9 @@
+# Partida curta: movimentos relativos a cada nova peca.
+# Reproduzir com: ./build/tetris --seed 42 --replay examples/partida.txt
+a a a x
+d d d x
+w a x
+z d x
+p . s a w p
+. . s x
+q
