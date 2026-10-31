@@ -42,7 +42,14 @@ class TerminalTests(unittest.TestCase):
             else:
                 os.write(master, b'q')
             self.assertEqual(process.wait(timeout=5), 0)
-            self.assertEqual(termios.tcgetattr(slave), original, 'Restauracao do terminal')
+            restored = termios.tcgetattr(slave)
+            # BSD/macOS pode marcar PENDIN ao voltar ao modo canonico.
+            # E estado transitorio do driver, nao configuracao alterada pelo jogo.
+            pending = getattr(termios, 'PENDIN', 0)
+            restored[3] &= ~pending
+            expected = original.copy()
+            expected[3] &= ~pending
+            self.assertEqual(restored, expected, 'Restauracao da configuracao do terminal')
             while select.select([master], [], [], 0.05)[0]:
                 output += os.read(master, 65536)
             self.assertIn(b'\x1b[?25h', output, 'Cursor restaurado')
