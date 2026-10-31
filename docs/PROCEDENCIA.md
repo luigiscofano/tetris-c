@@ -2,7 +2,7 @@
 
 Luigi Scofano de Araujo relatou ter implementado um Tetris em C durante sua formação. Na preparação deste portfólio, em 31/10/2026, buscas direcionadas no Drive, no histórico acessível e no ambiente de trabalho não recuperaram o fonte nem o enunciado original. A associação anterior a MAC2166/EP3 não foi comprovada por um documento recuperado.
 
-Por isso, todo o código deste repositório é **uma implementação nova preparada nesta edição com assistência de IA**, revisada por compilação e testes. Não há aqui um arquivo antigo autenticado, uma nota, um relatório de avaliação do professor ou comprovação de entrega.
+Por isso, todo o código deste repositório é **uma implementação nova preparada nesta edição**, revisada por compilação e testes. Não há aqui um arquivo antigo autenticado, uma nota, um relatório de avaliação do professor ou comprovação de entrega.
 
 ## O que é novo
 

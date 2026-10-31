@@ -8,7 +8,7 @@
 
 **Um jogo de blocos para estudar programação em C: matrizes, transformações, estados e testes automatizados.** Motor independente do terminal, sete peças, próxima peça, queda automática, pontuação, níveis, pausa e partidas reproduzíveis por seed.
 
-> **Procedência:** esta é uma implementação nova de portfólio, preparada em 2026 com assistência de IA. Luigi relata ter desenvolvido um Tetris em C na faculdade, mas o arquivo original e o enunciado não foram recuperados. Este repositório não é uma cópia autenticada da entrega de MAC2166/EP3. [Contexto e procedência →](docs/PROCEDENCIA.md)
+> **Procedência:** esta é uma implementação nova de portfólio, preparada em 2026. Luigi relata ter desenvolvido um Tetris em C na faculdade, mas o arquivo original e o enunciado não foram recuperados. Este repositório não é uma cópia autenticada da entrega de MAC2166/EP3. [Contexto e procedência →](docs/PROCEDENCIA.md)
 
 ## Comece por aqui
 
