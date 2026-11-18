@@ -10,13 +10,28 @@
 
 ## O que este projeto faz
 
+<details>
+<summary>Expandir O que este projeto faz</summary>
+
 Implementa um jogo de blocos em um tabuleiro de **10 colunas por 20 linhas**. O jogador move e gira a peça que cai, completa linhas e acumula pontos. Há próxima peça, avanço de nível, pausa, reinício e um modo de reprodução por arquivo. O programa roda no terminal; não exige navegador, servidor, ncurses ou uma biblioteca gráfica externa.
+
+
+</details>
 
 ## Qual problema resolve
 
+<details>
+<summary>Expandir Qual problema resolve</summary>
+
 O desafio de engenharia é transformar regras de jogo em um estado coerente e verificável: impedir colisões, distinguir a peça ativa dos blocos fixos, girar coordenadas e remover linhas sem perder outras células. Separar o motor da interface permite testar essas regras sem teclado nem relógio real.
 
+
+</details>
+
 ## Funcionalidades e módulos
+
+<details>
+<summary>Expandir Funcionalidades e módulos</summary>
 
 ### 1. Motor de regras
 
@@ -34,7 +49,13 @@ O mesmo motor recebe comandos de um arquivo, sem depender do tempo humano entre 
 
 Os testes exercitam regras, entradas inválidas, invariantes e restauração do terminal. O preview SVG da capa é produzido a partir do replay real. Essas ferramentas apoiam o jogo e não são aplicativos independentes.
 
+
+</details>
+
 ## Como executar
+
+<details>
+<summary>Expandir Como executar</summary>
 
 **Requisitos:** compilador C11 (GCC/Clang), GNU Make, Python 3.9+ para testes e terminal ANSI com pelo menos 80×30. O código Python de apoio usa a biblioteca padrão.
 
@@ -87,13 +108,25 @@ cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 -Iinclude src/main.c src/termin
 ./tetris --seed 42
 ```
 
+
+</details>
+
 ## O que desenvolvi e aprendi
+
+<details>
+<summary>Expandir O que desenvolvi e aprendi</summary>
 
 A implementação desta edição reúne modelagem por matrizes, transformações geométricas, validação antes da mutação, compactação estável de linhas, geração pseudoaleatória reproduzível e separação entre domínio e plataforma. Os [objetivos pedagógicos](docs/OBJETIVOS_PEDAGOGICOS.md) propõem atividades para explicar e alterar cada mecanismo.
 
 O projeto se relaciona ao Tetris em C relatado durante a graduação. O fonte original não foi recuperado; esta é uma implementação nova de portfólio, com [procedência explícita](docs/PROCEDENCIA.md).
 
+
+</details>
+
 ## Estado atual
+
+<details>
+<summary>Expandir Estado atual</summary>
 
 | Situação | Recursos |
 | --- | --- |
@@ -102,11 +135,23 @@ O projeto se relaciona ao Tetris em C relatado durante a graduação. O fonte or
 | Fora desta versão | Hold, ghost, SRS, T-spin, combos, multiplayer e ranking persistente |
 | Verificação manual adicional | Conforto de uso e sessão humana no console Windows e em diferentes emuladores de terminal |
 
+
+</details>
+
 ## Validação e limites
+
+<details>
+<summary>Expandir Validação e limites</summary>
 
 `make test` é o ponto de entrada. Em ambiente compatível, `make sanitize` recompila com AddressSanitizer e UndefinedBehaviorSanitizer. O [workflow](.github/workflows/ci.yml) inclui Linux, macOS e Windows; o resultado de cada execução informa o estado real. O replay detecta regressões, mas sua saída de referência não é um gabarito acadêmico independente.
 
+
+</details>
+
 ## Documentação e navegação
+
+<details>
+<summary>Expandir Documentação e navegação</summary>
 
 | Pasta / guia | Conteúdo |
 | --- | --- |
@@ -120,12 +165,27 @@ O projeto se relaciona ao Tetris em C relatado durante a graduação. O fonte or
 Projeto independente de estudo, sem afiliação a produtos comerciais ou comprovação de equivalência com um enunciado antigo.
 
 
+
+</details>
+
 ## Autoria, referências e licença
+
+<details>
+<summary>Expandir Autoria, referências e licença</summary>
 
 **Luigi Scofano de Araujo · Engenharia de Computação, Poli-USP · USP 13680334.** Fontes recuperados, componentes de terceiros e trabalhos em grupo mantêm os créditos indicados nos arquivos e na documentação.
 
 [Procedência](docs/PROCEDENCIA.md) · [Como contribuir](CONTRIBUTING.md) · [Mudanças](CHANGELOG.md)
 
+
+</details>
+
 ## Tópicos do repositório
 
+<details>
+<summary>Expandir Tópicos do repositório</summary>
+
 `c` · `c11` · `tetris` · `terminal-game` · `game-development` · `algorithms` · `deterministic-replay` · `unit-testing` · `educational`
+
+
+</details>
